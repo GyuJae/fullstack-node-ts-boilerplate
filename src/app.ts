@@ -1,7 +1,7 @@
 import express, { Express } from 'express';
 
 import dotenv from 'dotenv';
-import homeRouter from '@routes/home.router.js';
+import homeRouter from './routes/home.router';
 
 dotenv.config();
 
@@ -10,8 +10,9 @@ const port = process.env.PORT;
 
 app.set("view engine", "pug");
 app.set("views", process.cwd() + "/src/views");
-
+app.use("/static",express.static('assets'));
 app.use(express.urlencoded({ extended: true }));
+
 
 app.use('/', homeRouter)
 
