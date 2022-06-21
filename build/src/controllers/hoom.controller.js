@@ -1,2 +1,2 @@
-export const home = (_, res) => res.render('home', { pageTitle: 'Home' });
+export const home = (_, res) => res.sendFile('index.html', { pageTitle: 'Home' });
 //# sourceMappingURL=hoom.controller.js.map

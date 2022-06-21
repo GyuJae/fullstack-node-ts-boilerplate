@@ -2,12 +2,12 @@ doctype html
 html(lang="ko")
   head
     title #{pageTitle}
-    script(src="https://cdn.tailwindcss.com")
   body
     header
       h1=pageTitle
     
     main
       block content
-    
+      my-element
+    script(src="/src/components/my-element.ts") 
     include partials/footer
